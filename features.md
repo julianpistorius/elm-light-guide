@@ -10,7 +10,7 @@ Whenever this chapter refers to command. That is a Light Table command which you
 
 `[:editor "alt-enter" :editor.linter.details]  ;; command to display details for a marked error or warning after linting`
 
-To view all available commands and suggestions tips on how you might want to do more advanced configurations, check out the [Reference](/reference.md) chapter
+To view all available commands and suggestions tips on how you might want to do more advanced configurations, check out the [Reference chapter](/reference.md)
 
 ## Linting
 
@@ -53,8 +53,6 @@ In an Elm editor you can view documentation for top level functions inline in th
 
 Inline docs works for both top level declarations in 3rd party packages as well as you own module docs.
 
-
-
 ## Auto completer
 
 The autocompleter kicks in only once you have a connection to your elm project \(connect explicitly or just invoke the lint command, inline doc command etc\).
@@ -67,9 +65,7 @@ It's on by default. If you wish to turn it off you need to do as follows:
 * Search for and select `Settings: User behaviors`
 * Add the following to your user.behaviors file to disable the autocompleter
 
-\[:editor.elm :lt.plugins.elm-light.hinter\/elm-hints\]` ; Turn off the autocompleter`
-
-
+\[:editor.elm :lt.plugins.elm-light.hinter\/elm-hints\]`; Turn off the autocompleter`
 
 ## Jump to definition \(and back\)
 
@@ -77,23 +73,17 @@ In an Elm file, place the cursor on a symbol and select the command `Editor: Jum
 
 > NOTE: The jump to feature only works for top level definitions. AND it's not fool proof, as it doesn't currently parse and infer stuff within expression bodies \(so for example if you shadow names and stuff, it will be confused\).
 
-
-
 ## Refactoring
 
 **Ast Driven featueres**
 
-![](/assets/ast-status.png) 
+![](/assets/ast-status.png)
 
 In the bottom statusbar you'll notice an AST notification symbol\/marker. Behind the scenes the plugin parses all your projects Elm code to an AST representation. The parser is by no means perfect and may fail, but generally it's fairly lenient compared to the Elm compiler \(that's an understatement\). Anyways it parses on the fly as you type. That means that it will fail regurlarily as yo type. The icon\/symbol turns red and the text indicates a failure to parse. Not to worry... unless you have something that really is valid elm code \(as verified by using Elm Lint\).
 
 If you find cases where it doesn't report success when it should please do submit a bug request to the plugin issue tracker \(with a reprodicuble case  \(elm file or reference to one\).
 
-
-
 > NOTE: You may experience cases where things have gotten out of sync with the editor buffer. I haven't tested this stuff that much yet, so I'm letting you be my betatesters \(: The ramicfications shouldn't be end-of-the-world scenarios because the key features like Linting and formatting should work just fine regardless. But please do help me make it nice and robust by letting me know when something odd occurs !
-
-
 
 **Expose\/Unexpose declaration**
 
@@ -103,11 +93,7 @@ A tiny marker in the editor gutter indicates that a function\/value is exposed p
 
 To expose a function place the cursor on the function name \(or type name\) and select the command `Elm: Expose top level declaration` to unexpose it use the command `Elm: Unexpose top level declaration`
 
-
-
 > NOTE: If your module declaration exposes all \(..\), then these commands have no effects. Pls also note that currently these commands are not formatting friendly \(you will loose comments, extra newlines you might have used etc\).
-
-
 
 **More is coming here in the weeks and months to come. Feel free to help suggest ideas !**
 
@@ -135,6 +121,7 @@ Once connected to an elm-project in Light Table, a repl is started running in th
   **However** results are shown next to the first line of the selection, even though the actual result might be the related to the last statement \(or if an error, whatever line caused the error\)
 
 * results are shown inline
+
 
 You may reset the repl to start with a clean slate. Just select the command: \`Elm: Restart repl for current project\`
 
