@@ -5,13 +5,12 @@ For pretty much any operation this plugin you support you need an elm client con
 is a small node process that the plugin typically will spawn automatically for any action that requires a elm client.
 
 When the elm-client starts it;
+
 * Opens an elm-repl
 * Starts \(and listens\) to elm-reactor
 * Downloads packages if necessary and parses all relevant Elm code to AST representations
 * Starts a listener process for changes to Elm files and packages
 * Listens for commands from light table \(eval, docs, autocompletions etc\)
-
-
 
 You may also manually connect to an elm project using the connect bar in Light Table
 
@@ -23,14 +22,15 @@ You may also manually connect to an elm project using the connect bar in Light T
 
 * To disconnect
 
-  * Invoke the command ```Connect: Show connect bar```
+  * Invoke the command `Connect: Show connect bar`
 
   * Find the project in the list and click disconnect
 
 
 
-
 The client connections are named after the the directory containing the elm-package.json
+
+![](/assets/connection.png)
 
 ## Elm Project
 
@@ -42,11 +42,7 @@ end up having to add some config especially a elm-package.json. So as mentioned 
 
 Say you have a project with the following structure
 
-
-
- `/home/myuser/projects/hello-elm/elm-package.json````/home/myuser/projects/hello-elm/hello.elm````/home/myuser/projects/hello-elm/src/util.elm`
-
-
+`````/home/myuser/projects/hello-elm/elm-package.json````/home/myuser/projects/hello-elm/hello.elm````/home/myuser/projects/hello-elm/src/util.elm`````
 
 * If you start of with evaluating hello.elm, the plugin will start looking for a elm-package.json in the same directory
 
