@@ -1,8 +1,8 @@
-# Elm Light - The Elm plugin for Light Table
+# [Elm Light - The Elm plugin for Light Table](https://rundis.gitbooks.io/elm-light-guide/content/)
 
 This plugin aims to provide you with 1st. class support for the [Elm](http://elm-lang.org) programming language and associated platform.
 
-It's very much work in progress, but it's getting better by the day and will improve even more when the Elm platform gets more hooks for tooling. 
+It's very much work in progress, but it's getting better by the day and will improve even more when the Elm platform gets more hooks for tooling.
 
 Some of the key features already supported are:
 
@@ -15,12 +15,7 @@ Some of the key features already supported are:
 * **Docs**: It's really handy to have documentation inline in your editor. The plugin supports display docs for modules from external packages as well as your own modules and top level declarations. You can also search for docs for any publicly exposed function within your project. Less context switching for you ! For package authors there is also a documentation preview which is really handy to use before you publish a package to the central package repository.
 * **Navigation**: You can easily jump to back and forth between functions and modules. Both using the Module browser and through the use of quick navigation \(jump to\) in your editor buffers.
 
-
-
-
 If you find any bugs or want to request features, don't hesitate to submit them to the [issue tracker](https://github.com/rundis/elm-light/issues) for plugin repo
-
-
 
 
 
