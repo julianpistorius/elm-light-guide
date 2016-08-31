@@ -2,8 +2,6 @@
 
 ## Commands
 
- 
-
 | Command | Description | Mappable command \(user.keymap\) |
 | --- | --- | --- |
 | Elm: Lint selected file | Lint the current elm file and display results inline | \[:editor.elm "&lt;keychord&gt;" :elm.lint\] |
@@ -35,6 +33,24 @@
 |  |  |  |
 | Docs: Toggle documentation at cursor | Show documentation inline for a top level declaration \(reference\) | \[:editor "ctrl-d" :editor.doc.toggle\] |
 | Docs: Search language docs | Open search bar to search for docs in all your projects modules \(including 3rd party packages\) | \[:app "ctrl-shift-d" :docs.search.show\] |
+
+
+
+## Useful configurations
+
+**Lint and format on save**
+
+`[:editor.elm "cmd-s" :save :elm-format :elm.lint]`
+
+
+
+**Clear inline results**
+
+`[:app "cmd-shift-e" :clear-console :clear-inline-results :editor.linter.remove-all]`
+
+
+
+
 
 
 
