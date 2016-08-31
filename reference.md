@@ -4,8 +4,6 @@
 
  
 
-
-
 | Command | Description | Mappable command \(user.keymap\) |
 | --- | --- | --- |
 | Elm: Lint selected file | Lint the current elm file and display results inline | \[:editor.elm "&lt;keychord&gt;" :elm.lint\] |
