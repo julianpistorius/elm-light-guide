@@ -12,47 +12,6 @@ Whenever this chapter refers to command. That is a Light Table command which you
 
 To view all available commands and suggestions tips on how you might want to do more advanced configurations, check out the [Reference chapter](/reference.md)
 
-## Linting
-
-![](/assets/lint.png)
-
-To lint an elm file use the command: `Elm: Lint selected file`
-
-* Errors are marked with red underline, warnings with yellow underline
-* Errors\/warnings in dependent files are shown in the console
-
-**Details and navigation**
-
-* To view details about an error or warning place your cursor inside an underline range and select the command `Linter: Show details at cursor`
-
-* To move to next lint result select command `Linter: Move to next result`
-
-* To move to previous lint result select command `Linter: Move to previous result`
-
-
-> NOTE: Rember to save. Linting works on saved files !
-
-You can also configure the plugin to automatically Lint on Save. See the [Reference](/reference.md) section for details
-
-**Quickfixes**
-
-For some warnings and errors there are shortcut operations to do fixes in your code.
-
-* **Unused import**: Allows you to quickly remove an unused import
-* **Missing type annotation**:  Facility to add type annotation \(top level expressions only\)
-* **Type mismatch**: Facility to fix a type annotation that doesn't match the implementation
-* **Naming errors**: For some spelling errors the compiler will provide helpful suggestions. Feature to quickly apply one of those suggestions \(if any\)
-
-> NOTE: When an linter message is open and a quick fix operation is available you will have buttons for each possible action. Pressing `Enter` will invoke the first action available \(which is typically the one you want\)
-
-## Inline Docs
-
-![](/assets/inline_doc.png)
-
-In an Elm editor you can view documentation for top level functions inline in the editor. Just position the cursor on something and press `ctrl+d`.If the symbol refers to a top level declaration that has documentation the docs will be displayed inline at your cursor. Press ctrl+d again to close the doc view.
-
-Inline docs works for both top level declarations in 3rd party packages as well as you own module docs.
-
 ## Auto completer
 
 The autocompleter kicks in only once you have a connection to your elm project \(connect explicitly or just invoke the lint command, inline doc command etc\).
@@ -73,43 +32,9 @@ In an Elm file, place the cursor on a symbol and select the command `Editor: Jum
 
 > NOTE: The jump to feature only works for top level definitions. AND it's not fool proof, as it doesn't currently parse and infer stuff within expression bodies \(so for example if you shadow names and stuff, it will be confused\).
 
-## Refactoring
-
-**Ast Driven featueres**
-
-![](/assets/ast-status.png)
-
-In the bottom statusbar you'll notice an AST notification symbol\/marker. Behind the scenes the plugin parses all your projects Elm code to an AST representation. The parser is by no means perfect and may fail, but generally it's fairly lenient compared to the Elm compiler \(that's an understatement\). Anyways it parses on the fly as you type. That means that it will fail regurlarily as yo type. The icon\/symbol turns red and the text indicates a failure to parse. Not to worry... unless you have something that really is valid elm code \(as verified by using Elm Lint\).
-
-If you find cases where it doesn't report success when it should please do submit a bug request to the plugin issue tracker \(with a reprodicuble case  \(elm file or reference to one\).
-
-> NOTE: You may experience cases where things have gotten out of sync with the editor buffer. I haven't tested this stuff that much yet, so I'm letting you be my betatesters \(: The ramicfications shouldn't be end-of-the-world scenarios because the key features like Linting and formatting should work just fine regardless. But please do help me make it nice and robust by letting me know when something odd occurs !
-
-**Expose\/Unexpose declaration**
-
-![](/assets/expose.png)
-
-A tiny marker in the editor gutter indicates that a function\/value is exposed publicly by the module.
-
-To expose a function place the cursor on the function name \(or type name\) and select the command `Elm: Expose top level declaration` to unexpose it use the command `Elm: Unexpose top level declaration`
-
-> NOTE: If your module declaration exposes all \(..\), then these commands have no effects. Pls also note that currently these commands are not formatting friendly \(you will loose comments, extra newlines you might have used etc\).
-
-**More is coming here in the weeks and months to come. Feel free to help suggest ideas !**
-
-## Language Docs
-
-![](/assets/language_docs.png)
-
-**With an .elm file open;**
-
-* Select the command: `Docs: Search language docs (ctrl-shift-d)`
-* Enter search criteria
-* Behold the results
-
-_To be improved !_
-
 ## Elm Repl
+
+![](/assets/repl.png)
 
 Once connected to an elm-project in Light Table, a repl is started running in the background.This means you can evaluate statements from within any given elm editor.
 
@@ -125,9 +50,7 @@ Once connected to an elm-project in Light Table, a repl is started running in th
 
 You may reset the repl to start with a clean slate. Just select the command: \`Elm: Restart repl for current project\`
 
-> NOTE: Results are currently only showed sensibly if you eval one top level statement at a time. Also the repl is shared
-> 
-> between all elm editors for a given project.
+> NOTE: Results are currently only showed sensibly if you eval one top level statement at a time. Also the repl is shared between all elm editors for a given project.
 
 **Anonymous repl**
 
@@ -148,13 +71,9 @@ To use
 
 * Select the command `Elm: View current elm file in browser (elm-reactor)`
 
-TIP: If you get a blank page \(and\/or an error in the console about the address not being available\), it might be
-
-because elm-reactor is running make in the background. You might need to be patient and refresh the browser \(\`cmd+r\` for mac\)
-
-WARNING: On Mac the elm-reactor starts two processes. You may experience occurences when the plugin is unable
-
-to terminate both these subprocesses appropriately for now. To be improved.
+> TIP: If you get a blank page \(and\/or an error in the console about the address not being available\), it might be because elm-reactor is running make in the background. You might need to be patient and refresh the browser \(\`cmd+r\` for mac\)
+> 
+> WARNING: On Mac the elm-reactor starts two processes. You may experience occurences when the plugin is unable to terminate both these subprocesses appropriately for now. To be improved.
 
 You may close connections by using the command \`Connect: Show connect bar\` and click disconnect for your elm project
 
