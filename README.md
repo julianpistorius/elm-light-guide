@@ -6,7 +6,7 @@ It's very much work in progress, but it's getting better by the day and will imp
 
 Some of the key features already supported are:
 
-* **Linting** of your projects with inline errors and warnings. There are also some handy quickfixes available for various warning messages returned from the elm compiler
+* [**Linting**](/linting.md) of your projects with inline errors and warnings. There are also some handy quickfixes available for various warning messages returned from the elm compiler
 * **Syntax highlighting**: Syntax highlighting is provided throug a slightly customized CodeMirror mode \(Light Table uses CodeMirror behind the scenes\)
 * **Package manager**: There is a handy package manager that lets you add\/remove packages to your project. It's a nice convenience feature to make it easier for you to manage your dependencies. There is also a cool dependency viewer to see how it all ties together with direct and transitive dependencies
 * **Reactor integration: **When you connect to an Elm project the plugin will start an elm-reactor instance for you in the background. This allows you to quickly get started and you can use the inbuildt browser in Light Table to view your changes  by a quick combination of save and refresh.
@@ -16,8 +16,6 @@ Some of the key features already supported are:
 * **Navigation**: You can easily jump to back and forth between functions and modules. Both using the Module browser and through the use of quick navigation \(jump to\) in your editor buffers.
 
 If you find any bugs or want to request features, don't hesitate to submit them to the [issue tracker](https://github.com/rundis/elm-light/issues) for plugin repo
-
-
 
 > I hope and trust you will find the plugin a useful and enjoyable tool for developing your Elm project and packages.
 > 
