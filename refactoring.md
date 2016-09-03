@@ -10,11 +10,7 @@ If you find cases where it doesn't report success when it should please do submi
 
 > NOTE: You may experience cases where things have gotten out of sync with the editor buffer. I haven't tested this stuff that much yet, so I'm letting you be my betatesters \(: The ramicfications shouldn't be end-of-the-world scenarios because the key features like Linting and formatting should work just fine regardless. But please do help me make it nice and robust by letting me know when something odd occurs !
 
-
-
 **\*\*NONE OF THE FOLLOWING FEATURES ARE CURRENTLY PARTICULARILY WHITESPACE FRIENDLY. NEWLINES, EXTRA INDENTS, COMMENTS ETC MAY BE LOST DURING REFACTORING\*\***
-
-
 
 ### Sort imports
 
@@ -23,15 +19,10 @@ If your list of imports becomes long and unwieldy you might want to sort them. T
 * Firstly Project modules alphabetically
 * Secondly \(if any\) external modules alphabetically
 
-
 Usage:
 
-* With an open Elm editor in your project
+* In an open Elm editor in your project
 * Select the command `Elm: Sort imports`
-
-
-
-
 
 ### Autoimport Module
 
@@ -49,13 +40,12 @@ When you are in the middle of writing a function you suddenly realize that you n
 * After successfully selecting, the module is added as an import and then the whole list of imports is sorted as specified in [Sort imports](#sort-imports)
 
 > NOTE: Nothing will happen if:
+> 
 > * The format of the symbol at hand is not in the format described above. So `Html.App.map` will not work because `Html.App` is not a valid alias
 > * No function with the suggested name you provided exists or alternatively exists but isn't exposed by any module
 > * You already have an import for that module with a different alias
 > 
 > If you already have an import for that module, but haven't given it an alias, it will update the import declaration with the alias you provided
-
-
 
 ### **Expose\/Unexpose declaration**
 
@@ -66,8 +56,6 @@ A tiny marker in the editor gutter indicates that a function\/value is exposed p
 To expose a function place the cursor inside the range of a function or type\/type alias and select the command `Elm: Expose top level declaration` to unexpose it use the command `Elm: Unexpose top level declaration`
 
 > NOTE: If your module declaration exposes all \(..\), then these commands have no effects. Pls also note that currently these commands are not formatting friendly \(you will loose comments, extra newlines you might have used etc\).
-
-
 
 **More is coming here in the weeks and months to come. Feel free to help and suggest ideas !**
 
