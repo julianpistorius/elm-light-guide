@@ -29,12 +29,11 @@
 | Editor: Jump back to where you jumped from | Jump back to where you came from | \[:editor "ctrl-j-b" :editor.unjump\] |
 | Editor: Fold code at cursor | Fold code at cursor. A small symbol indicates folded code. Invoke again to unfold | \[:editor "ctrl-=" :editor.fold-code\] |
 |  |  |  |
+|  |  |  |
 | Eval: Eval a form in editor | For use in repl to eval an expression \(must be valid in elm-repl\) | \[:editor "pmeta-enter" :eval-editor-form\] |
 |  |  |  |
 | Docs: Toggle documentation at cursor | Show documentation inline for a top level declaration \(reference\) | \[:editor "ctrl-d" :editor.doc.toggle\] |
 | Docs: Search language docs | Open search bar to search for docs in all your projects modules \(including 3rd party packages\) | \[:app "ctrl-shift-d" :docs.search.show\] |
-
-
 
 ## Useful configurations
 
@@ -42,15 +41,7 @@
 
 `[:editor.elm "cmd-s" :save :elm-format :elm.lint]`
 
-
-
 **Clear inline results**
 
 `[:app "cmd-shift-e" :clear-console :clear-inline-results :editor.linter.remove-all]`
-
-
-
-
-
-
 
