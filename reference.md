@@ -35,13 +35,23 @@
 | Docs: Toggle documentation at cursor | Show documentation inline for a top level declaration \(reference\) | \[:editor "ctrl-d" :editor.doc.toggle\] |
 | Docs: Search language docs | Open search bar to search for docs in all your projects modules \(including 3rd party packages\) | \[:app "ctrl-shift-d" :docs.search.show\] |
 
-## Useful configurations
+## Useful configurations {#useful-configurations}
+
+**Enable autoclose brackets in Light Table**
+
+When you type for example `(` Light Table will automatically add `)` and place the cursor inside the parens. Works for \[ `(`, `[`, `"`, `'`, `{`\]
+
+`[:editor :lt.objs.editor/autoclose-brackets] ; This behavior enables auto close brackets`
 
 **Lint and format on save**
 
-`[:editor.elm "cmd-s" :save :elm-format :elm.lint]`
+Add this to your user keymap \(Ctrl-Space -&gt; "Settings: User keymap"\)
+
+`[:editor.elm "cmd-s" :save :elm-format :elm.lint] `
 
 **Clear inline results**
+
+Wipe out lint messages, inline results from repling and the console. To enable add the following \(Ctrl-Space -&gt; "Settings: User behaviours"
 
 `[:app "cmd-shift-e" :clear-console :clear-inline-results :editor.linter.remove-all]`
 
