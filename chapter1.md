@@ -13,6 +13,10 @@ When there are updates of the plugin an update button will be shown for `elm-lig
 
 > If you want to try out the latest stuff on master or feel the urge to contribute, check out the [Contributing](/contributing.md) chapter.
 
+
+
+**If you install on windows, you should use the platform install from elm-lang.org. Using the npm install on windows currently does not work. Sorry. \(I won't go into a rant about my feelings towards windows, but...\)**
+
 ## Preconditions
 
 * **LIghtTable 0.8-alpha or higher is required**
