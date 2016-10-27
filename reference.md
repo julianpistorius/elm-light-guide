@@ -47,11 +47,98 @@ When you type for example `(` Light Table will automatically add `)` and place t
 
 Add this to your user keymap \(Ctrl-Space -&gt; "Settings: User keymap"\)
 
-`[:editor.elm "cmd-s" :save :elm-format :elm.lint] `
+`[:editor.elm "cmd-s" :save :elm-format :elm.lint]`
 
 **Clear inline results**
 
 Wipe out lint messages, inline results from repling and the console. To enable add the following \(Ctrl-Space -&gt; "Settings: User behaviours"
 
 `[:app "cmd-shift-e" :clear-console :clear-inline-results :editor.linter.remove-all]`
+
+## First time Light Table User ?
+
+If you have just started using Light Table you'll probably find that you are missing keyboard short-cuts for navigating between editors, tabs etc. In this chapter some samples for the most commonly used shortcuts you might want to add to your keyboard mapping.
+
+### Modifying your keymapping
+- Open command bar (ctrl-space)
+- Find and select : `Settings: User keymap`
+- Copy/paste/modify from the examples below
+- Save the file 
+- Try them out !
+
+### Some default shortcuts worth mentioning
+* New file: `File: New File` -> `cmd-n`
+* Open/search for file (in your workspace) : `cmd-o`
+* Open file in filesystem : `File : Open File` -> `cmd-shift-o`
+
+
+
+### Navigation related keyboard shortcuts
+```clojure
+
+ ;; Add a new tab with the in-buildt chromium browser that is shipped with LT
+ [:app "cmd-shift-b" :add-browser-tab]
+
+ ;; Create a new tabset (container for tabs)
+ [:app "ctrl-shift-t" :tabset.new]
+ 
+ ;; Move to the next/previous tabset (if more than one)
+ [:app "cmd-alt-right" :tabset.next]
+ [:app "cmd-alt-left" :tabset.prev]
+ 
+ ;; Move to next/prev Tab (within a given tabset)
+ [:app "ctrl-shift-right" :tabs.next]
+ [:app "ctrl-shift-left" :tabs.prev]
+
+ ;; Move a given tab to the next/previous tabset
+ [:app "cmd-ctrl-right" :tabs.move-next-tabset]
+ [:app "cmd-ctrl-left" :tabs.move-prev-tabset]
+
+ ;; Move a given TAB to a new tabset to the right of the current tabset
+ [:app "cmd-ctrl-n" :tabset.new :tabs.move-next-tabset]
+ 
+ ;; Clear console, any inline results and linter markers
+ [:app "cmd-shift-e" :clear-console :clear-inline-results :editor.linter.remove-all]
+ 
+
+ ;; Toggle display of the console 
+ [:app "cmd-shift-t" :toggle-console]
+ 
+ ;; Toggle display of the workspace tree
+ [:app "cmd-shift-w" :workspace.show]
+```
+
+### Some handy generic editor shortcuts
+```clojure
+ ;; Show find bar in current editor
+ [:editor "cmd-f" :find.show]
+ 
+ ;; Scroll page up/down
+ [:editor "alt-d" :editor.page-down]
+ [:editor "alt-u" :editor.page-up]
+
+ ;; Custom keybinding for zoom in/out
+ [:editor "ctrl-z-i" :window.zoom-in]
+ [:editor "ctrl-z-o" :window.zoom-out]
+
+ ;; Jump/unjump to definition (for language plugins that support it... like the elm-light plugin)
+ [:editor "ctrl-j" :editor.jump-to-definition-at-cursor]
+ [:editor "ctrl-shift-j" :editor.unjump]
+
+ ;; Sublime style line kill
+ [:editor "ctrl-k" :editor.kill-line]
+
+ ;; Duplicate line
+ [:editor "cmd-d" :editor.sublime.duplicateLine]
+ 
+ ;; Move to the beginning of a line (bar tabs/spaces)
+ [:editor "ctrl-left" :editor.line-start-smart]
+
+ ;; Multiple cursors. First time selects word, next invocation selects next occurence of selection in Editor
+ [:editor "ctrl-g" :editor.sublime.selectNextOccurrence]
+
+ ;; Select between brackets
+ [:editor "alt-s" :editor.sublime.selectBetweenBrackets]
+
+```
 
