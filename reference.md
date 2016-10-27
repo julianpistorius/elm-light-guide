@@ -35,6 +35,8 @@
 | Docs: Toggle documentation at cursor | Show documentation inline for a top level declaration \(reference\) | \[:editor "ctrl-d" :editor.doc.toggle\] |
 | Docs: Search language docs | Open search bar to search for docs in all your projects modules \(including 3rd party packages\) | \[:app "ctrl-shift-d" :docs.search.show\] |
 
+> It's also possible to have a keyboard short-cut execute several commands in order. You can see an example of that in the next chapter where we set up a cusotm shortcut for saving, formatting the file and finally linting the file.
+
 ## Useful configurations {#useful-configurations}
 
 **Enable autoclose brackets in Light Table**
@@ -60,20 +62,21 @@ Wipe out lint messages, inline results from repling and the console. To enable a
 If you have just started using Light Table you'll probably find that you are missing keyboard short-cuts for navigating between editors, tabs etc. In this chapter some samples for the most commonly used shortcuts you might want to add to your keyboard mapping.
 
 ### Modifying your keymapping
-- Open command bar (ctrl-space)
-- Find and select : `Settings: User keymap`
-- Copy/paste/modify from the examples below
-- Save the file 
-- Try them out !
+
+* Open command bar \(ctrl-space\)
+* Find and select : `Settings: User keymap`
+* Copy\/paste\/modify from the examples below
+* Save the file 
+* Try them out !
 
 ### Some default shortcuts worth mentioning
-* New file: `File: New File` -> `cmd-n`
-* Open/search for file (in your workspace) : `cmd-o`
-* Open file in filesystem : `File : Open File` -> `cmd-shift-o`
 
-
+* New file: `File: New File` -&gt; `cmd-n`
+* Open\/search for file \(in your workspace\) : `cmd-o`
+* Open file in filesystem : `File : Open File` -&gt; `cmd-shift-o`
 
 ### Navigation related keyboard shortcuts
+
 ```clojure
 
  ;; Add a new tab with the in-buildt chromium browser that is shipped with LT
@@ -81,11 +84,11 @@ If you have just started using Light Table you'll probably find that you are mis
 
  ;; Create a new tabset (container for tabs)
  [:app "ctrl-shift-t" :tabset.new]
- 
+
  ;; Move to the next/previous tabset (if more than one)
  [:app "cmd-alt-right" :tabset.next]
  [:app "cmd-alt-left" :tabset.prev]
- 
+
  ;; Move to next/prev Tab (within a given tabset)
  [:app "ctrl-shift-right" :tabs.next]
  [:app "ctrl-shift-left" :tabs.prev]
@@ -96,23 +99,24 @@ If you have just started using Light Table you'll probably find that you are mis
 
  ;; Move a given TAB to a new tabset to the right of the current tabset
  [:app "cmd-ctrl-n" :tabset.new :tabs.move-next-tabset]
- 
+
  ;; Clear console, any inline results and linter markers
  [:app "cmd-shift-e" :clear-console :clear-inline-results :editor.linter.remove-all]
- 
+
 
  ;; Toggle display of the console 
  [:app "cmd-shift-t" :toggle-console]
- 
+
  ;; Toggle display of the workspace tree
  [:app "cmd-shift-w" :workspace.show]
 ```
 
 ### Some handy generic editor shortcuts
+
 ```clojure
  ;; Show find bar in current editor
  [:editor "cmd-f" :find.show]
- 
+
  ;; Scroll page up/down
  [:editor "alt-d" :editor.page-down]
  [:editor "alt-u" :editor.page-up]
@@ -130,7 +134,7 @@ If you have just started using Light Table you'll probably find that you are mis
 
  ;; Duplicate line
  [:editor "cmd-d" :editor.sublime.duplicateLine]
- 
+
  ;; Move to the beginning of a line (bar tabs/spaces)
  [:editor "ctrl-left" :editor.line-start-smart]
 
