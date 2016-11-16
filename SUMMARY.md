@@ -12,8 +12,9 @@
     * [Refactoring](refactoring.md)
     * [Code navigation](code-navigation.md)
     * [Autocompleter](autocompleter.md)
+    * [Testing](testing.md)
     * [Managing Dependencies](managing-dependencies.md)
-    * [Misc](misc.md)
+    * Testing
 * [Reference](reference.md)
 * [Contributing](contributing.md)
 
