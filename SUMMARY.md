@@ -14,7 +14,6 @@
     * [Autocompleter](autocompleter.md)
     * [Testing](testing.md)
     * [Managing Dependencies](managing-dependencies.md)
-    * Testing
 * [Reference](reference.md)
 * [Contributing](contributing.md)
 
