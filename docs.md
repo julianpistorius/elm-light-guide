@@ -26,14 +26,14 @@ _To be improved !_
 
 ![](/assets/packagedocs.png)
 
-If you are writing a package to be deployed to http:\/\/package.elm-lang.org\/ you need to document all your exposed modules \(remember to add any modules for public usage to the `exposed-modules` entry in your `elm-package.json`\)
+If you are writing a package to be deployed to http://package.elm-lang.org/ you need to document all your exposed modules (remember to add any modules for public usage to the `exposed-modules` entry in your `elm-package.json`)
 
 **You can preview the docs in Light Table**
 
-* From an open elm editor \(an exposed module remember\)
+* From an open elm editor (an exposed module remember)
 * Select the command : `Elm: Preview doc for selected file`
-* A preview window is opened \(you might want to move that to it's own tabset\)
-* Write docs according to the instructions at http:\/\/package.elm-lang.org\/help\/documentation-format
+* A preview window is opened (you might want to move that to it's own tabset)
+* Write docs according to the instructions at http://package.elm-lang.org/help/documentation-format
 * When you save your file the preview will be automatically updated
 
 > NOTE: The doc preview only works for exposed modules
