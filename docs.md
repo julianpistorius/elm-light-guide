@@ -4,7 +4,7 @@
 
 ![](/assets/inline_doc.png)
 
-In an Elm editor you can view documentation for top level functions inline in the editor. Just position the cursor on something and press `ctrl+d`.If the symbol refers to a top level declaration that has documentation the docs will be displayed inline at your cursor. Press ctrl+d again to close the doc view.
+In an Elm editor you can view documentation for top level functions inline in the editor. Just position the cursor on something and press `ctrl+d`.If the symbol refers to a top level declaration that has documentation the docs will be displayed inline at your cursor. Press `ctrl+d` again to close the doc view.
 
 Inline docs works for both top level declarations in 3rd party packages as well as you own module docs.
 
